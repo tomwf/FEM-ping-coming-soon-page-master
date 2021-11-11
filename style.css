@@ -153,7 +153,7 @@ a {
     gap: 1em;
   }
 
-  main form input[type='email'] {
+  main form div {
     flex: 3;
   }
 
