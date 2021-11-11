@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root {
+/********** primary **********/
+
+--blue: hsl(223, 87%, 63%);
+
+/********** secondary **********/
+
+--pale-blue: hsl(223, 100%, 88%);
+--light-red: hsl(354, 100%, 66%);
+
+/********** neutral **********/
+
+--gray: hsl(0, 0%, 59%);
+--very-dark-blue: hsl(209, 33%, 12%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+p,
+span {
+  margin: .5em 0;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  text-align: center;
+}
+
+header {
+  margin: 3em;
+}
+
+main {
+  width: 80%;
+  max-width: 700px;
+  margin: auto;
+}
+
+.thin {
+  font-weight: 300;
+  color: var(--gray);
+}
+
+form {
+  width: 100%;
+  margin: 2em 0;
+}
+
+form input {
+  padding: 1em 2em;
+  border-radius: 5em;
+  width: 100%;
+  height: 58px;
+  font-size: .75rem;
+}
+
+form input[type="email"] {
+  border: 1px solid var(--blue);
+} 
+
+form input[type="email"]::placeholder {
+  color: var(--gray);
+}
+
+form input[type="email"].not-valid {
+  outline: 2px solid var(--light-red);
+  border: none;
+}
+
+form div {
+  margin-bottom: 1em;
+}
+
+form div > span {
+  font-size: .75rem;
+  color: var(--light-red);
+}
+
+form input[type="submit"] {
+  cursor: pointer;
+  box-shadow: 0 8px 8px var(--pale-blue);
+}
+
+form input[type="submit"]:active {
+  filter: brightness(1.1);
+}
+
+main > img {
+  width: 110%;
+  transform: translateX(-5%);
+}
+
+#submitBtn {
+  border: none;
+  background-color: var(--blue);
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.social-media {
+  margin: 2em;
+}
+
+.social-media a {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--pale-blue);
+}
+
+.social-media a:hover {
+  background-color: var(--blue);
+}
+
+.social-media a i {
+  width: 100%;
+  height: 100%;
+  color: var(--blue);
+  line-height: 40px;
+  vertical-align: middle;
+}
+
+.social-media a i:hover {
+  color: white;
+}
+
+.copyright {
+  margin: 2em;
+  color: var(--gray);
+  font-size: .75rem;
+}
+
+@media screen and (min-width: 650px) {
+  main form {
+    display: flex;
+    gap: 1em;
+  }
+
+  main form input[type='email'] {
+    flex: 3;
+  }
+
+  main form input[type='submit'] {
+    flex: 1;
+  }
+  
+  main form div {
+    text-align: initial;
+  }
+
+  main form div > span {
+    position: relative;
+    left: 2em;
+  }
+
+}
